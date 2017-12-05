@@ -312,7 +312,6 @@ func (bc *Blockchain) MineBlock(transactions []*Transaction) *Block {
 		if err != nil {
 			log.Panic(err)
 		}
-
 		err = b.Put([]byte("l"), newBlock.Hash)
 		if err != nil {
 			log.Panic(err)
